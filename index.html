@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>GamesofLinux4everyone</title>
-	<META NAME="keywords" CONTENT="Linux, Ubuntu, Linux Mint, Manajro, Arch, Lutris, Proton, Wine">
+	<META NAME="keywords" CONTENT="Linux, Ubuntu, Linux Mint, Manjaro, Arch, Lutris, Proton, Wine, Steam, Huayra, Gaming, GamingonLinux">
 	<META NAME="description" CONTENT="Games4everyone">
 	<link rel="stylesheet" href="css/index.css">
 	
@@ -10,19 +10,21 @@
 
 
 <body>
-	<center><h1>Gamesof<i>Linux4</i>everyone</h1></center>
-	<center><FONT FACE="Arial"><h3>Una pagina con una finalidad simple...</h3></center></FONT>
-	<br>
+	<header>
+
+				<div align = "left"><button id="bdark">Modo Oscuro</button></div>
+		
+			<center><h1>Gamesof<i>Linux4</i>everyone</h1></center>
+		
+		<center><img src= "img/linux-logo.png" width="200" height="200"></center>
+			
+	</header>
+	
+	<center><h3>Juegos Nativos </h3></center>
 	<center><p>Recuerde usar Ctrl + F para buscar el juego que necesita</p></center>
 
-<label for= "" class="dark-mode-button">
-	
-	<input id="dark-mode" type="checkbox" onclick="document.documentElement.classList.toggle('dark-mode')">
-	Activar Modo Oscuro
-</label>
-
-
-<center><TABLE BORDER WIDTH="25%" HEIGHT="15%">
+<main>
+	<center><TABLE BORDER WIDTH="35%" HEIGHT="15%">
 	<TR>
 		<TH>Nombre</TH><TH>Peso (GB)</TH><TH>Año</TH><TH>Link</TH>
 	</TR>
@@ -69,6 +71,12 @@
 		<TD>Metal Slug</TD><TD>0.03</TD><TD>1996</TD><TD><A HREF= "https://ouo.io/CEnfYW" target="_blank" rel="noopener noreferrer"> Link </A></TD>
 	</TR>
 	<TR>
+		<TD>Need For Speed 2</TD><TD>0.42</TD><TD>1997</TD><TD><A HREF= "https://ouo.io/6jW0iK" target="_blank" rel="noopener noreferrer"> Link </A></TD>
+	</TR>
+		<TR>
+		<TD>Need For Speed Underground</TD><TD>0.99</TD><TD>2003</TD><TD><A HREF= "https://ouo.io/RjA10B" target="_blank" rel="noopener noreferrer"> Link </A></TD>
+	</TR>
+	<TR>
 		<TD>Northgard - The Viking Age Edition</TD><TD>0.85</TD><TD>2018</TD><TD><A HREF= "https://ouo.io/HoCgqj" target="_blank" rel="noopener noreferrer"> Link </A></TD>
 	</TR>
 	<TR>
@@ -83,9 +91,52 @@
 	<TR>
 		<TD>Shadow Warrior (Classic)</TD><TD>0.24</TD><TD>2014</TD><TD><A HREF= "https://ouo.io/WBR8iI" target="_blank" rel="noopener noreferrer"> Link </A></TD>
 	</TR>
+	<TR>
+		<TD>Sleepstream</TD><TD>0.15</TD><TD>2018</TD><TD><A HREF= "https://ouo.io/WBR8iI" target="_blank" rel="noopener noreferrer"> Link </A></TD>
+	</TR>
+	<TR>
+		<TD>Vampire Survivors</TD><TD>0.18</TD><TD>2021</TD><TD><A HREF= "https://ouo.io/gzWWsX" target="_blank" rel="noopener noreferrer"> Link </A></TD>
+	</TR>
 	
 	
 </TABLE></center>
+
+
+<br>
+<br>
+
+	
+</main>
+
+	<script>
+		const bdark = document.querySelector('#bdark');
+		const body = document.querySelector('body');
+		
+		load();
+		
+		bdark.addEventListener('click',e =>{
+			body.classList.toggle('darkmode');
+			store(body.classList.contains('darkmode'));
+		});	
+			
+	function load(){
+		const darkmode = localStorage.getItem('darkmode');
+		
+		if(!darkmode){
+			store('false');
+		}else if (darkmode == 'true'){
+			body.classList.add('darkmode');
+	   }
+	}
+	
+	function store(value){
+		localStorage.setItem('darkmode',value)
+		}
+			
+			
+			
+			
+	</script>
 
 
 </body>

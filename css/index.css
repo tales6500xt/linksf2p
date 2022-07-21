@@ -1,16 +1,35 @@
-.dark-mode-button{
-	position: absolute;
-	top: 10px;
-	left: 10px;
+body{
+	background-color:white;
+	box-sizing: border-box;
+	font-family: Verdana;
+	font-size: 12;
+	padding: 5;
+	margin: 5;
+	
+	transition: all 0.3s;
+}
+header{
+	background-color: body.darkmode;
 	padding: 10px;
-	background: white;
+	display: center;
+	align-items: center;
+	font-size: 1.2em;
 }
 
-html.dark-mode{
-	filter: invert(100%);
+header button{
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1em;
+	padding: 5px;
+	background: #EFB200; 
 }
 
+header button:hover{
+	background-color: black;
+	color: yellow;
+}
 
-html.dark-mode img{
-	filter: invert(100%);
+body.darkmode{
+	background-color: rgb(24,24,24);
+	color: white;
 }
